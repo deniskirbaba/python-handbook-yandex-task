@@ -20,4 +20,3 @@ str_tests = ['', 'q', 'qq', 'qa', 'qaq', 'qaa']
 str_tests_answers = [True, True, True, False, True, False]
 assert [is_palindrome(i) for i in str_tests] == str_tests_answers, f'string tests failed'
 
-
