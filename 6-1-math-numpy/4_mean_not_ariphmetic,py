@@ -1,0 +1,7 @@
+import numpy as np
+
+
+n = list(map(float, input().split()))
+# geom_mean = np.exp(np.mean(np.log(n)))
+geom_mean_2 = np.power(np.prod(n), 1 / len(n))
+print(geom_mean_2)
