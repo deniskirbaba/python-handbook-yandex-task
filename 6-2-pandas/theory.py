@@ -3,6 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
+s = pd.Series(np.arange(10, 13), index=['a', 'b', 'c'])
+# print(s)
+# print(s[1:])
+# print(s.index)
+
+
 # s = pd.Series(data, index=index)
 # s = pd.Series(np.arange(5), index=['a', 'b', 'c', 'd', 'e'])
 # print(s)
@@ -83,8 +89,8 @@ data = pd.read_csv(filepath)
 # agg_functions = {'math score': ['mean', 'median']}
 # print(data.groupby(['gender', 'test preparation course']).agg(agg_functions))
 
-plt.hist(data['math score'], label='Math test')
-plt.xlabel('Math scores')
-plt.ylabel('Students')
-plt.legend()
-plt.show()
+# plt.hist(data['math score'], label='Math test')
+# plt.xlabel('Math scores')
+# plt.ylabel('Students')
+# plt.legend()
+# plt.show()
