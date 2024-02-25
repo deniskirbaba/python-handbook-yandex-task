@@ -8,5 +8,8 @@
 
 # print(f"{2**5:.2f}")
 
-binary_value = "1001"
-print(int(binary_value, 2))
+# binary_value = "1001"
+# print(int(binary_value, 2))
+
+width = 20
+print(f"{'hello': ^{width}}")

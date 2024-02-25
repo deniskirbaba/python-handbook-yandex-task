@@ -1,7 +1,9 @@
 dist = 43872
+
 p_speed = float(input())
 v_speed = float(input())
 t_speed = float(input())
+
 if p_speed > v_speed:
     if t_speed > p_speed:
         print("1. Толя\n2. Петя\n3. Вася")
