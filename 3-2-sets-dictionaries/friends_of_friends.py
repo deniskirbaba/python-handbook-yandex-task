@@ -1,8 +1,8 @@
 friends_1_lvl = dict()
 
 while names := input().split():
-    friends_1_lvl.setdefault(names[0], {names[1], }).add(names[1])
-    friends_1_lvl.setdefault(names[1], {names[0], }).add(names[0])
+    friends_1_lvl.setdefault(names[0], set()).add(names[1])
+    friends_1_lvl.setdefault(names[1], set()).add(names[0])
 
 friends_2_lvl = dict()
 for name, friends in friends_1_lvl.items():
