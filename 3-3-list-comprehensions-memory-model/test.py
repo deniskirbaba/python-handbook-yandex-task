@@ -46,10 +46,13 @@ from sys import getsizeof
 
 from timeit import timeit
 
-# x = 5
-# print(id(x))
-# y = x
-# print(id(y))
+x = 5
+print(id(x))
+y = x
+print(id(y))
+x = 6
+print(x, y)
+print(id(x), id(y))
 # print(y is x)
 
 # l = [1, 2, 3]
@@ -61,7 +64,7 @@ from timeit import timeit
 # l = l + [6]
 # print(id(l))
 
-mat = [[i + j for i in range(1, 4)] for j in [0, 3, 6]]
-print(mat)
-mat_copy = mat[:]
-print(mat_copy)
+# mat = [[i + j for i in range(1, 4)] for j in [0, 3, 6]]
+# print(mat)
+# mat_copy = mat[:]
+# print(mat_copy)
