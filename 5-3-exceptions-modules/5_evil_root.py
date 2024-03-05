@@ -1,11 +1,12 @@
-import math
-
-
-class InfiniteSolutionsError(Exception):
+class EquationError(Exception):
     pass
 
 
-class NoSolutionsError(Exception):
+class InfiniteSolutionsError(EquationError):
+    pass
+
+
+class NoSolutionsError(EquationError):
     pass
 
 
@@ -23,19 +24,19 @@ def find_roots(a, b, c):
             else:
                 raise NoSolutionsError
         else:
-            return (round(-c / b, 2), round(-c / b, 2))
+            return (-c / b, -c / b)
     else:
         d = b**2 - 4 * a * c
         if d < 0:
             raise NoSolutionsError
         elif d == 0:
-            return (round(-b / (2 * a), 2), round(-b / (2 * a), 2))
+            return (-b / (2 * a), -b / (2 * a))
         else:
-            q1 = (-b - math.sqrt(d)) / (2 * a)
-            q2 = (-b + math.sqrt(d)) / (2 * a)
+            q1 = (-b - d**0.5) / (2 * a)
+            q2 = (-b + d**0.5) / (2 * a)
             q = [q1, q2]
             q.sort()
-            return (round(q[0], 2), round(q[1], 2))
+            return (q[0], q[1])
 
 
 # TypeError tests
@@ -46,9 +47,9 @@ def find_roots(a, b, c):
 # find_roots(0, 0, 0)
 
 # NoSolutionsError tests
-# find_roots(0, 0, 1)
-#find_roots(1, 0, 2)
+print(find_roots(0, 0, 1))
+find_roots(1, 0, 2)
 
 # print(find_roots(1, 2, 1))
-print(find_roots(0, 10, 0))
+# print(find_roots(0, 10, 0))
 
